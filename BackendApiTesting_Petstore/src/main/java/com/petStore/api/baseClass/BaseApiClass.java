@@ -18,8 +18,8 @@ import io.restassured.specification.ResponseSpecification;
 public class BaseApiClass {
 	DataBaseConnectivity db = new DataBaseConnectivity();
 	FileUtility fileUtil = new FileUtility();
-	static RequestSpecification reqBuild ;
-	static ResponseSpecification respBuild ;
+	public  static RequestSpecification reqBuild ;
+	public static ResponseSpecification respBuild ;
 	
 	@BeforeSuite
 	public void configBS() throws IOException {
