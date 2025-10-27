@@ -13,9 +13,9 @@ public class JsonUtility {
 	 * @param resp
 	 * @param jsonXpath
 	 */
-	public String getDataOnJsonPath(Response resp,String jsonXpath) {
-		List<String> list = JsonPath.read(resp.asString(), jsonXpath);
-		return list.get(0).toString();
+	public Object getDataOnJsonPath(Response resp,String jsonXpath) {
+		List<Object> list = JsonPath.read(resp.asString(), jsonXpath);
+		return (String) list.get(0).toString();
 	}
 	
 	/**
