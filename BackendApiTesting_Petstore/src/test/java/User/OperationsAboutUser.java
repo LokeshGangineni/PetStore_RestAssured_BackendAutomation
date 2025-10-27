@@ -19,6 +19,7 @@ public class OperationsAboutUser extends BaseApiClass {
 
 		UserPOJO user= new UserPOJO(53,"LOKI", "Lokesh", "Gangineni", "lokesh@gmail.com", "loki@1304", "9876543210", 0);
 		
+		
 		given()
 			.spec(reqBuild)
 			.body(user)
