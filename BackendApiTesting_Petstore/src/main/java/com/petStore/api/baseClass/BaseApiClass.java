@@ -16,19 +16,23 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 public class BaseApiClass {
-	DataBaseConnectivity db = new DataBaseConnectivity();
+//	DataBaseConnectivity db = new DataBaseConnectivity();
 	FileUtility fileUtil = new FileUtility();
-	public  static RequestSpecification reqBuild ;
+
+	public static RequestSpecification reqBuild ;
+
+
+
 	public static ResponseSpecification respBuild ;
 	
 	@BeforeSuite
 	public void configBS() throws IOException {
-		db.getConnectionToDataBase();
+//		db.getConnectionToDataBase();
 		
 		RequestSpecBuilder Build1 = new RequestSpecBuilder();
 		Build1.setContentType(ContentType.JSON);
 //		Build1.addHeader("", "");
-		Build1.setBaseUri(fileUtil.readDataFromPropertyFile("BaseURL"));
+		Build1.setBaseUri(fileUtil.readDataFromPropertyFile("BaseUrl"));
 		reqBuild = Build1.build();
 		
 		
@@ -40,6 +44,6 @@ public class BaseApiClass {
 	
 	@AfterSuite
 	public void configAS() throws SQLException {
-		db.closeConnectionToDataBase();
+//		db.closeConnectionToDataBase();
 	}
 }
