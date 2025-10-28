@@ -1,1 +1,8 @@
 /target/
+/test-output/
+/Default suite/
+/junitreports/
+/Default test.html/
+/Default test.xml/
+/emailable-report.html/
+/testng-results.xml/

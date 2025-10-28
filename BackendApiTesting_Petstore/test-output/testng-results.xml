@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-27T16:06:26 IST" name="Default suite" finished-at="2025-10-27T16:06:26 IST" duration-ms="89">
+    <groups>
+    </groups>
+    <test started-at="2025-10-27T16:06:26 IST" name="Default test" finished-at="2025-10-27T16:06:26 IST" duration-ms="89">
+      <class name="User.OperationsAboutUser">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:User.OperationsAboutUser@3cd3e762]" started-at="2025-10-27T16:06:26 IST" name="configBS" finished-at="2025-10-27T16:06:26 IST" duration-ms="36" status="FAIL">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[C:\EclipseFolder\PetStore.Api.RestAssured.Framework\Env_config_Data.properties (The system cannot find the path specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: C:\EclipseFolder\PetStore.Api.RestAssured.Framework\Env_config_Data.properties (The system cannot find the path specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+at com.petStore.api.genericUtility.FileUtility.readDataFromPropertyFile(FileUtility.java:16)
+at com.petStore.api.genericUtility.DataBaseConnectivity.getConnectionToDataBase(DataBaseConnectivity.java:22)
+at com.petStore.api.baseClass.BaseApiClass.configBS(BaseApiClass.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method signature="cretaeUser()[pri:0, instance:User.OperationsAboutUser@3cd3e762]" started-at="2025-10-27T16:06:26 IST" name="cretaeUser" finished-at="2025-10-27T16:06:26 IST" duration-ms="0" status="SKIP">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[C:\EclipseFolder\PetStore.Api.RestAssured.Framework\Env_config_Data.properties (The system cannot find the path specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: C:\EclipseFolder\PetStore.Api.RestAssured.Framework\Env_config_Data.properties (The system cannot find the path specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+at com.petStore.api.genericUtility.FileUtility.readDataFromPropertyFile(FileUtility.java:16)
+at com.petStore.api.genericUtility.DataBaseConnectivity.getConnectionToDataBase(DataBaseConnectivity.java:22)
+at com.petStore.api.baseClass.BaseApiClass.configBS(BaseApiClass.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cretaeUser -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:User.OperationsAboutUser@3cd3e762]" started-at="2025-10-27T16:06:26 IST" name="configAS" finished-at="2025-10-27T16:06:26 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- User.OperationsAboutUser -->
+=======
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+=======
 <testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
+>>>>>>> refs/remotes/origin/master
   <reporter-output>
   </reporter-output>
   <suite started-at="2025-10-27T17:21:50 IST" name="Default suite" finished-at="2025-10-27T17:21:55 IST" duration-ms="4481">
@@ -75,6 +168,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- configAS -->
       </class> <!-- Pet.EveryThingAboutPets -->
+>>>>>>> refs/remotes/origin/master
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

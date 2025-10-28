@@ -18,7 +18,11 @@ import io.restassured.specification.ResponseSpecification;
 public class BaseApiClass {
 //	DataBaseConnectivity db = new DataBaseConnectivity();
 	FileUtility fileUtil = new FileUtility();
+
 	public static RequestSpecification reqBuild ;
+
+
+
 	public static ResponseSpecification respBuild ;
 	
 	@BeforeSuite
