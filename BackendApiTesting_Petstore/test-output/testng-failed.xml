@@ -5,7 +5,7 @@
     <classes>
       <class name="Pet.EveryThingAboutPets">
         <methods>
-          <include name="updatePetWithFormDataTest"/>
+          <include name="findPetByIDTest"/>
           <include name="configAS"/>
           <include name="configBS"/>
         </methods>

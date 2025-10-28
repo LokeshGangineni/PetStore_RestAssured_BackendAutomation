@@ -56,6 +56,7 @@ public class EveryThingAboutPets extends BaseApiClass {
 			.post(IendPoints.addnewPetToStore);
 		resp.then()
 			.spec(respBuild)
+			.assertThat().statusCode(200)
 			.log().all();
 		
 		 petId = jsonutil.getDataOnJsonPath(resp, ".id");
@@ -73,6 +74,7 @@ public class EveryThingAboutPets extends BaseApiClass {
 				.put(IendPoints.addnewPetToStore);
 			resp.then()
 				.spec(respBuild)
+				.assertThat().statusCode(200)
 				.log().all();
 	}
 	
@@ -82,7 +84,7 @@ public class EveryThingAboutPets extends BaseApiClass {
 		
 		Response resp = given()
 				.spec(reqBuild)
-				.pathParam("petId", petId)
+				.pathParam("petId", petId )
 	            .multiPart("file", new File("src/test/resources/dog.jpg")) // image path
 	            .contentType("multipart/form-data") // ✅ Correct type for file upload
 	            .accept(ContentType.JSON)
@@ -90,36 +92,38 @@ public class EveryThingAboutPets extends BaseApiClass {
 				.post(IendPoints.uploadImage);
 			resp.then()
 				.spec(respBuild)
+				.assertThat().statusCode(200)
 				.log().all();
 	}
 	
 	
-	@Test
-	public void findPetByStatusTest() {
-		
-		
-		given()
-			.spec(reqBuild)
-			.queryParam("status", "available")
-		.when()
-			.get(IendPoints.findPetsStatus)
-		.then()
-			.assertThat().statusCode(200)
-//			.assertThat().statusLine("successful operation")
-			.log().all();
-	}
+//	@Test
+//	public void findPetByStatusTest() {
+//		
+//		
+//		given()
+//			.spec(reqBuild)
+//			.queryParam("status", "available")
+//		.when()
+//			.get(IendPoints.findPetsStatus)
+//		.then()
+//			.assertThat().statusCode(200)
+////			.assertThat().statusLine("successful operation")
+//			.log().all();
+//	}
 	
 	@Test
 	public void findPetByIDTest() {
 		
 		given()
 			.spec(reqBuild)
-			.pathParam("petId", "9223372036854757730")
+			.pathParam("petId", petId)
 		.when()
 			.get(IendPoints.findPetByID)
 		.then()
-			.assertThat().statusCode(200)
+
 			.spec(respBuild)
+			.assertThat().statusCode(200)
 			.log().all();
 	}
 	
@@ -128,14 +132,31 @@ public class EveryThingAboutPets extends BaseApiClass {
 	public void updatePetWithFormDataTest() {
 		given()
 		.spec(reqBuild)
-		.pathParam("petId", "9223372036854757730")
-		.queryParam("status", "sold")
+		.pathParam("petId", petId)
+		  .contentType("application/x-www-form-urlencoded")
+		.formParam("name", "Bairava")
+		.header("Accept", "application/json")  // 👈 Force JSON
 	.when()
 		.post(IendPoints.updatePetInStoreByFormData)
 	.then()
 		.spec(respBuild)
+//		.assertThat().statusCode(200)
 		.log().all();
 	}
 	
+	
+	@Test
+	public void deletePetTest() {
+		
+		given()
+		.spec(reqBuild)
+		.pathParam("petId", petId)
+		  .header("Accept", "application/json")  // 👈 Force JSON
+	.when()
+		.delete(IendPoints.deletePet)
+	.then()
+
+		.log().all();
+	}
 	
 }

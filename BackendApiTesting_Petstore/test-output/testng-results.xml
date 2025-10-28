@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-27T17:21:50 IST" name="Default suite" finished-at="2025-10-27T17:21:55 IST" duration-ms="4481">
+  <suite started-at="2025-10-27T18:28:53 IST" name="Default suite" finished-at="2025-10-27T18:29:03 IST" duration-ms="9163">
     <groups>
     </groups>
-    <test started-at="2025-10-27T17:21:50 IST" name="Default test" finished-at="2025-10-27T17:21:55 IST" duration-ms="4481">
+    <test started-at="2025-10-27T18:28:53 IST" name="Default test" finished-at="2025-10-27T18:29:03 IST" duration-ms="9163">
       <class name="Pet.EveryThingAboutPets">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:Pet.EveryThingAboutPets@489115ef]" started-at="2025-10-27T17:21:49 IST" name="configBS" finished-at="2025-10-27T17:21:50 IST" duration-ms="1203" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:Pet.EveryThingAboutPets@74e52ef6]" started-at="2025-10-27T18:28:53 IST" name="configBS" finished-at="2025-10-27T18:28:53 IST" duration-ms="402" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method signature="updatePetWithFormDataTest()[pri:0, instance:Pet.EveryThingAboutPets@489115ef]" started-at="2025-10-27T17:21:50 IST" name="updatePetWithFormDataTest" finished-at="2025-10-27T17:21:55 IST" duration-ms="4408" status="FAIL">
+        <test-method signature="addNewPetToStoreTest()[pri:0, instance:Pet.EveryThingAboutPets@74e52ef6]" started-at="2025-10-27T18:28:53 IST" name="addNewPetToStoreTest" finished-at="2025-10-27T18:28:56 IST" duration-ms="2473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewPetToStoreTest -->
+        <test-method signature="deletePetTest()[pri:0, instance:Pet.EveryThingAboutPets@74e52ef6]" started-at="2025-10-27T18:28:56 IST" name="deletePetTest" finished-at="2025-10-27T18:28:57 IST" duration-ms="1305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePetTest -->
+        <test-method signature="findPetByIDTest()[pri:0, instance:Pet.EveryThingAboutPets@74e52ef6]" started-at="2025-10-27T18:28:57 IST" name="findPetByIDTest" finished-at="2025-10-27T18:28:58 IST" duration-ms="1303" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
-Expected content-type "JSON" doesn't match actual content-type "application/xml".
+Expected status code <200> but was <404>.
 ]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected content-type "JSON" doesn't match actual content-type "application/xml".
+Expected status code <200> but was <404>.
 
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
@@ -32,12 +40,19 @@ at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(Abstrac
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
 at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
 at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
-at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
-at Pet.EveryThingAboutPets.updatePetWithFormDataTest(EveryThingAboutPets.java:136)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Pet.EveryThingAboutPets.findPetByIDTest(EveryThingAboutPets.java:126)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -69,8 +84,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- findPetByIDTest -->
+        <test-method signature="updateExistingPetTest()[pri:0, instance:Pet.EveryThingAboutPets@74e52ef6]" started-at="2025-10-27T18:28:58 IST" name="updateExistingPetTest" finished-at="2025-10-27T18:29:00 IST" duration-ms="1286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateExistingPetTest -->
+        <test-method signature="updatePetWithFormDataTest()[pri:0, instance:Pet.EveryThingAboutPets@74e52ef6]" started-at="2025-10-27T18:29:00 IST" name="updatePetWithFormDataTest" finished-at="2025-10-27T18:29:01 IST" duration-ms="1366" status="PASS">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- updatePetWithFormDataTest -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:Pet.EveryThingAboutPets@489115ef]" started-at="2025-10-27T17:21:55 IST" name="configAS" finished-at="2025-10-27T17:21:55 IST" duration-ms="1" status="PASS">
+        <test-method signature="uploadPetImageTest()[pri:0, instance:Pet.EveryThingAboutPets@74e52ef6]" started-at="2025-10-27T18:29:01 IST" name="uploadPetImageTest" finished-at="2025-10-27T18:29:03 IST" duration-ms="1390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadPetImageTest -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:Pet.EveryThingAboutPets@74e52ef6]" started-at="2025-10-27T18:29:03 IST" name="configAS" finished-at="2025-10-27T18:29:03 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
