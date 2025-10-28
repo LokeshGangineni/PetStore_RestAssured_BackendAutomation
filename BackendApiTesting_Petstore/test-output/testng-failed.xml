@@ -14,9 +14,9 @@
 =======
       <class name="Pet.EveryThingAboutPets">
         <methods>
+          <include name="updatePetWithFormDataTest"/>
           <include name="configAS"/>
           <include name="configBS"/>
-          <include name="addNewPetToStoreTest"/>
         </methods>
       </class> <!-- Pet.EveryThingAboutPets -->
 >>>>>>> refs/remotes/origin/master
