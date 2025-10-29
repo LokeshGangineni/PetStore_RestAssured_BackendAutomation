@@ -1,35 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-27T16:06:26 IST" name="Default suite" finished-at="2025-10-27T16:06:26 IST" duration-ms="89">
+  <suite started-at="2025-10-29T13:59:00 IST" name="Default suite" finished-at="2025-10-29T13:59:10 IST" duration-ms="10089">
     <groups>
     </groups>
-    <test started-at="2025-10-27T16:06:26 IST" name="Default test" finished-at="2025-10-27T16:06:26 IST" duration-ms="89">
-      <class name="User.OperationsAboutUser">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:User.OperationsAboutUser@3cd3e762]" started-at="2025-10-27T16:06:26 IST" name="configBS" finished-at="2025-10-27T16:06:26 IST" duration-ms="36" status="FAIL">
-          <exception class="java.io.FileNotFoundException">
+    <test started-at="2025-10-29T13:59:00 IST" name="Default test" finished-at="2025-10-29T13:59:10 IST" duration-ms="10089">
+      <class name="Pet.EveryThingAboutPetsTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:Pet.EveryThingAboutPetsTest@74e52ef6]" started-at="2025-10-29T13:59:00 IST" name="configBS" finished-at="2025-10-29T13:59:00 IST" duration-ms="551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method signature="addNewPetToStoreTest()[pri:0, instance:Pet.EveryThingAboutPetsTest@74e52ef6]" started-at="2025-10-29T13:59:00 IST" name="addNewPetToStoreTest" finished-at="2025-10-29T13:59:03 IST" duration-ms="2878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewPetToStoreTest -->
+        <test-method signature="findPetByIDTest()[pri:0, instance:Pet.EveryThingAboutPetsTest@74e52ef6]" started-at="2025-10-29T13:59:03 IST" name="findPetByIDTest" finished-at="2025-10-29T13:59:05 IST" duration-ms="1342" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[C:\EclipseFolder\PetStore.Api.RestAssured.Framework\Env_config_Data.properties (The system cannot find the path specified)]]>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <404>.
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: C:\EclipseFolder\PetStore.Api.RestAssured.Framework\Env_config_Data.properties (The system cannot find the path specified)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
-at com.petStore.api.genericUtility.FileUtility.readDataFromPropertyFile(FileUtility.java:16)
-at com.petStore.api.genericUtility.DataBaseConnectivity.getConnectionToDataBase(DataBaseConnectivity.java:22)
-at com.petStore.api.baseClass.BaseApiClass.configBS(BaseApiClass.java:26)
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Pet.EveryThingAboutPetsTest.findPetByIDTest(EveryThingAboutPetsTest.java:121)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
 at org.testng.SuiteRunner.run(SuiteRunner.java:312)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
@@ -42,69 +85,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configBS -->
-        <test-method signature="cretaeUser()[pri:0, instance:User.OperationsAboutUser@3cd3e762]" started-at="2025-10-27T16:06:26 IST" name="cretaeUser" finished-at="2025-10-27T16:06:26 IST" duration-ms="0" status="SKIP">
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[C:\EclipseFolder\PetStore.Api.RestAssured.Framework\Env_config_Data.properties (The system cannot find the path specified)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: C:\EclipseFolder\PetStore.Api.RestAssured.Framework\Env_config_Data.properties (The system cannot find the path specified)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
-at com.petStore.api.genericUtility.FileUtility.readDataFromPropertyFile(FileUtility.java:16)
-at com.petStore.api.genericUtility.DataBaseConnectivity.getConnectionToDataBase(DataBaseConnectivity.java:22)
-at com.petStore.api.baseClass.BaseApiClass.configBS(BaseApiClass.java:26)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+        </test-method> <!-- findPetByIDTest -->
+        <test-method signature="findPetByStatusTest()[pri:0, instance:Pet.EveryThingAboutPetsTest@74e52ef6]" started-at="2025-10-29T13:59:05 IST" name="findPetByStatusTest" finished-at="2025-10-29T13:59:07 IST" duration-ms="1866" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cretaeUser -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:User.OperationsAboutUser@3cd3e762]" started-at="2025-10-27T16:06:26 IST" name="configAS" finished-at="2025-10-27T16:06:26 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- findPetByStatusTest -->
+        <test-method signature="updateExistingPetTest()[pri:0, instance:Pet.EveryThingAboutPetsTest@74e52ef6]" started-at="2025-10-29T13:59:07 IST" name="updateExistingPetTest" finished-at="2025-10-29T13:59:08 IST" duration-ms="1297" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configAS -->
-      </class> <!-- User.OperationsAboutUser -->
-=======
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
-=======
-<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
->>>>>>> refs/remotes/origin/master
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-10-27T17:21:50 IST" name="Default suite" finished-at="2025-10-27T17:21:55 IST" duration-ms="4481">
-    <groups>
-    </groups>
-    <test started-at="2025-10-27T17:21:50 IST" name="Default test" finished-at="2025-10-27T17:21:55 IST" duration-ms="4481">
-      <class name="Pet.EveryThingAboutPets">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:Pet.EveryThingAboutPets@489115ef]" started-at="2025-10-27T17:21:49 IST" name="configBS" finished-at="2025-10-27T17:21:50 IST" duration-ms="1203" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configBS -->
-        <test-method signature="updatePetWithFormDataTest()[pri:0, instance:Pet.EveryThingAboutPets@489115ef]" started-at="2025-10-27T17:21:50 IST" name="updatePetWithFormDataTest" finished-at="2025-10-27T17:21:55 IST" duration-ms="4408" status="FAIL">
+        </test-method> <!-- updateExistingPetTest -->
+        <test-method signature="updatePetWithFormDataTest()[pri:0, instance:Pet.EveryThingAboutPetsTest@74e52ef6]" started-at="2025-10-29T13:59:08 IST" name="updatePetWithFormDataTest" finished-at="2025-10-29T13:59:09 IST" duration-ms="1283" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
@@ -120,17 +113,12 @@ at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.jav
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
 at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
 at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
 at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
 at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
-at Pet.EveryThingAboutPets.updatePetWithFormDataTest(EveryThingAboutPets.java:136)
+at Pet.EveryThingAboutPetsTest.updatePetWithFormDataTest(EveryThingAboutPetsTest.java:136)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -163,12 +151,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updatePetWithFormDataTest -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:Pet.EveryThingAboutPets@489115ef]" started-at="2025-10-27T17:21:55 IST" name="configAS" finished-at="2025-10-27T17:21:55 IST" duration-ms="1" status="PASS">
+        <test-method signature="uploadPetImageTest()[pri:0, instance:Pet.EveryThingAboutPetsTest@74e52ef6]" started-at="2025-10-29T13:59:09 IST" name="uploadPetImageTest" finished-at="2025-10-29T13:59:10 IST" duration-ms="1375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadPetImageTest -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:Pet.EveryThingAboutPetsTest@74e52ef6]" started-at="2025-10-29T13:59:11 IST" name="configAS" finished-at="2025-10-29T13:59:11 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- Pet.EveryThingAboutPets -->
->>>>>>> refs/remotes/origin/master
+      </class> <!-- Pet.EveryThingAboutPetsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

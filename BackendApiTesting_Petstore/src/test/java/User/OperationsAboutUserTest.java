@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.*;
 
 
 
-public class OperationsAboutUser extends BaseApiClass {
+public class OperationsAboutUserTest extends BaseApiClass {
 	
 	IendPoints endpoints;
 	
