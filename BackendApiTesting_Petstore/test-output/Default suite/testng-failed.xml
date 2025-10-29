@@ -3,23 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="User.OperationsAboutUser">
+      <class name="Pet.EveryThingAboutPetsTest">
         <methods>
           <include name="configAS"/>
           <include name="configBS"/>
-          <include name="cretaeUser"/>
-        </methods>
-      </class> <!-- User.OperationsAboutUser -->
-=======
-      <class name="Pet.EveryThingAboutPets">
-        <methods>
+          <include name="findPetByIDTest"/>
           <include name="updatePetWithFormDataTest"/>
-          <include name="configAS"/>
-          <include name="configBS"/>
         </methods>
-      </class> <!-- Pet.EveryThingAboutPets -->
->>>>>>> refs/remotes/origin/master
+      </class> <!-- Pet.EveryThingAboutPetsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class EveryThingAboutPets extends BaseApiClass {
+public class EveryThingAboutPetsTest extends BaseApiClass {
 
 	JsonUtility jsonutil = new JsonUtility();
 	public Object petId;
